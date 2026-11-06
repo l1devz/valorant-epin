@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="bgt3650" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#082a2e"/><stop offset=".55" stop-color="#0d1017"/><stop offset="1" stop-color="#082a2e"/>
+    </linearGradient>
+    <radialGradient id="glowt3650" cx=".72" cy=".45" r=".55">
+      <stop offset="0" stop-color="#5ce1e6" stop-opacity=".55"/><stop offset="1" stop-color="#5ce1e6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="coint3650" cx=".35" cy=".3" r=".85">
+      <stop offset="0" stop-color="#5ce1e6"/><stop offset=".45" stop-color="#147d86"/><stop offset="1" stop-color="#082a2e"/>
+    </radialGradient>
+    <linearGradient id="edget3650" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#5ce1e6"/><stop offset="1" stop-color="#5ce1e6" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="gridt3650" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#fff" stroke-opacity=".04"/>
+    </pattern>
+  </defs>
+  <rect width="600" height="400" rx="28" fill="url(#bgt3650)"/>
+  <rect width="600" height="400" rx="28" fill="url(#gridt3650)"/>
+  <rect width="600" height="400" rx="28" fill="url(#glowt3650)"/>
+  <polygon points="557.3117283950617,311.838134430727 624.616769547325,335.39489883401916 584.233744855967,379.14317558299035" fill="#5ce1e6" opacity="0.14"/><polygon points="530.9207818930041,8.182441700960219 627.7463991769547,42.071407750342935 569.6510288065843,105.00805898491083" fill="#5ce1e6" opacity="0.15"/><polygon points="574.6532921810699,334.9794238683128 653.0982510288065,362.4351594650206 606.0312757201646,413.4243827160494" fill="#5ce1e6" opacity="0.06"/><polygon points="401.10185185185185,398.40192043895746 447.3389917695473,414.58491941015086 419.59670781893004,444.6390603566529" fill="#5ce1e6" opacity="0.15"/><polygon points="407.30349794238685,134.25240054869684 557.1352880658436,186.6935270919067 467.23621399176955,284.0841906721536" fill="#5ce1e6" opacity="0.07"/><polygon points="448.0730452674897,130.1851851851852 529.1538065843621,158.56345164609053 480.50534979423867,211.2659465020576" fill="#5ce1e6" opacity="0.10"/><polygon points="449.33641975308643,114.59533607681756 590.0612139917696,163.84901406035664 505.6263374485597,255.3201303155007" fill="#5ce1e6" opacity="0.09"/>
+  <g transform="translate(482 182)">
+    <circle r="112" fill="#5ce1e6" opacity=".08"/>
+    <circle r="94" fill="url(#coint3650)"/>
+    <circle r="94" fill="none" stroke="#5ce1e6" stroke-opacity=".6" stroke-width="2"/>
+    <g transform="scale(1.36) translate(-64 -64)">
+      <circle cx="64" cy="64" r="59" fill="none" stroke="#fff" stroke-opacity=".32" stroke-width="10"/>
+      <path d="M31 37 75 91.5H53L31 64.5Z M97.5 37V64.5L90 73.5H69Z" fill="#fff"/>
+    </g>
+    <path d="M-87 -34 A94 94 0 0 1 34 -87" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <rect x="36" y="36" width="96" height="30" rx="6" fill="#5ce1e6"/>
+  <text x="84" y="57" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="15" fill="#0d1017" letter-spacing="2">E-PIN</text>
+  <text x="146" y="57" font-family="Segoe UI, Arial, sans-serif" font-weight="700" font-size="14" fill="#fff" fill-opacity=".6" letter-spacing="3">TR BÖLGESİ</text>
+  <text x="36" y="214" font-family="Segoe UI, Arial, sans-serif" font-weight="900" font-size="88" fill="#fff" letter-spacing="-2">3.650</text>
+  <text x="40" y="254" font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="22" fill="#5ce1e6" letter-spacing="5">VALORANT POINTS</text>
+  <rect x="40" y="276" width="180" height="3" fill="url(#edget3650)"/>
+  <text x="36" y="354" font-family="Segoe UI, Arial, sans-serif" font-weight="800" font-size="16" fill="#fff" fill-opacity=".85" letter-spacing="4">PLATİN PAKET</text>
+  <text x="564" y="354" text-anchor="end" font-family="Consolas, monospace" font-size="14" fill="#fff" fill-opacity=".35" letter-spacing="2">XXXX-XXXX-XXXX</text>
+  <rect x="1" y="1" width="598" height="398" rx="27" fill="none" stroke="#5ce1e6" stroke-opacity=".35" stroke-width="2"/>
+</svg>

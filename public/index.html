@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VPMarket | Valorant Points E-Pin – Anında Teslimat</title>
+  <meta name="description" content="Valorant Points (VP) e-pin kodları uygun fiyatla, 7/24 otomatik ve anında teslim. Türkiye bölgesi.">
+  <meta name="theme-color" content="#0b0e14">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" href="img/vp-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-coin"><img src="img/vp-icon.svg" alt=""></div>
+  <div class="loader-bar"><i></i></div>
+</div>
+<div class="progress" id="progress"></div>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <span><i class="dot"></i> Otomatik teslimat sistemi aktif · 7/24</span>
+    <span class="topbar-links"><a href="#sss">Yardım</a><a href="#destek">İletişim</a></span>
+  </div>
+</div>
+
+<header class="header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="logo" aria-label="VPMarket ana sayfa">
+      <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><polygon points="16,1 30,13 16,31 2,13" fill="#ff4655"/><polygon points="16,1 30,13 16,15" fill="#fff" opacity=".3"/><polygon points="16,9 22,14 16,22 10,14" fill="none" stroke="#fff" stroke-width="1.6"/></svg>
+      <span>VP<b>Market</b></span>
+    </a>
+    <label class="search">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input id="search" type="search" placeholder="Paket ara… (örn. 2050)" autocomplete="off" maxlength="12" inputmode="numeric" data-only="digits">
+    </label>
+    <nav class="nav">
+      <a href="#paketler">Paketler</a>
+      <a href="#nasil">Nasıl Yüklenir</a>
+      <a href="#sss">SSS</a>
+    </nav>
+    <button class="cart-btn" id="cartOpen" aria-label="Sepeti aç">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20.5" r="1.4" fill="currentColor"/><circle cx="17" cy="20.5" r="1.4" fill="currentColor"/></svg>
+      <span class="cart-label">Sepet</span>
+      <b id="cartCount">0</b>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow intro" style="--d:.1s">Türkiye Bölgesi · Resmi E-Pin Kodları</span>
+        <h1 class="intro" style="--d:.2s">Valorant Points<br><span class="hl"><span class="typed" id="typed">anında</span></span> hesabında.</h1>
+        <p class="lead intro" style="--d:.35s">Ödemeni yap, e-pin kodun saniyeler içinde sipariş ekranına ve e-postana gelsin. Bekleme yok, aracı yok.</p>
+        <div class="hero-cta intro" style="--d:.5s">
+          <a href="#paketler" class="btn btn-primary btn-lg">Hemen Satın Al
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#nasil" class="btn btn-outline btn-lg">Nasıl Yüklenir?</a>
+        </div>
+        <div class="pay-row intro" style="--d:.65s">
+          <span>Ödeme yöntemleri:</span>
+          <em>Kredi Kartı</em><em>Banka Kartı</em><em>Havale / EFT</em>
+        </div>
+      </div>
+      <div class="hero-visual intro" style="--d:.3s" id="heroVisual" aria-hidden="true">
+        <div class="orbit"><span></span><span></span><span></span></div>
+        <div class="layer" data-depth="18"><img src="img/cards/vp-3650.svg" class="hc hc-1" alt=""></div>
+        <div class="layer" data-depth="30"><img src="img/cards/vp-5350.svg" class="hc hc-2" alt=""></div>
+        <div class="layer" data-depth="44"><img src="img/cards/vp-2050.svg" class="hc hc-3" alt=""></div>
+        <div class="layer" data-depth="60">
+          <div class="hero-coin"><img src="img/vp-icon.svg" alt=""></div>
+        </div>
+        <div class="float-chip chip-a"><svg class="ico ico-zap" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg> 3 sn'de teslim</div>
+        <div class="float-chip chip-b"><svg class="ico ico-ok" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg> 3D Secure</div>
+      </div>
+    </div>
+    <a href="#paketler" class="scroll-hint" aria-label="Aşağı kaydır"><span></span></a>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Anında Teslimat</span><img src="img/vp-icon.svg" alt=""><span>Güvenli Ödeme</span><img src="img/vp-icon.svg" alt=""><span>7/24 Destek</span><img src="img/vp-icon.svg" alt=""><span>TR Bölgesi</span><img src="img/vp-icon.svg" alt=""><span>Orijinal Kod</span><img src="img/vp-icon.svg" alt="">
+      <span>Anında Teslimat</span><img src="img/vp-icon.svg" alt=""><span>Güvenli Ödeme</span><img src="img/vp-icon.svg" alt=""><span>7/24 Destek</span><img src="img/vp-icon.svg" alt=""><span>TR Bölgesi</span><img src="img/vp-icon.svg" alt=""><span>Orijinal Kod</span><img src="img/vp-icon.svg" alt="">
+    </div>
+  </div>
+
+  <section class="features">
+    <div class="container features-grid">
+      <div class="feature" data-reveal>
+        <div class="f-ico"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></div>
+        <div><strong>Anında Teslimat</strong><span>Ödeme sonrası otomatik</span></div>
+      </div>
+      <div class="feature" data-reveal>
+        <div class="f-ico"><svg viewBox="0 0 24 24"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5" class="stroke"/></svg></div>
+        <div><strong>Güvenli Ödeme</strong><span>256-bit SSL & 3D Secure</span></div>
+      </div>
+      <div class="feature" data-reveal>
+        <div class="f-ico"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0 1 16 0v5a2 2 0 0 1-2 2h-2v-6h4M4 13h4v6H6a2 2 0 0 1-2-2v-4Z"/></svg></div>
+        <div><strong>7/24 Destek</strong><span>Canlı destek hattı</span></div>
+      </div>
+      <div class="feature" data-reveal>
+        <div class="f-ico"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M7 11h4M7 15h7" class="stroke"/></svg></div>
+        <div><strong>Orijinal Kod</strong><span>Yetkili dağıtıcıdan</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="paketler" class="section">
+    <div class="container">
+      <div data-reveal class="section-head">
+        <div>
+          <span class="eyebrow">Mağaza</span>
+          <h2>Valorant Points Paketleri</h2>
+        </div>
+        <div class="toolbar">
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-filter="all">Tümü</button>
+            <button class="tab" data-filter="popular">Popüler</button>
+            <button class="tab" data-filter="sale">İndirimli</button>
+          </div>
+          <select id="sort" aria-label="Sırala">
+            <option value="asc">Fiyat: Artan</option>
+            <option value="desc">Fiyat: Azalan</option>
+            <option value="value">En Avantajlı (₺/VP)</option>
+          </select>
+        </div>
+      </div>
+      <div class="grid" id="products"></div>
+      <p class="empty-result" id="emptyResult" hidden>Aramana uygun paket bulunamadı.</p>
+    </div>
+  </section>
+
+  <section id="nasil" class="section section-alt">
+    <div class="container">
+      <div data-reveal class="section-head center">
+        <div>
+          <span class="eyebrow">4 Adımda</span>
+          <h2>VP Nasıl Yüklenir?</h2>
+        </div>
+      </div>
+      <ol class="steps">
+        <li data-reveal><span class="num">01</span><h3>Paketi seç</h3><p>İhtiyacın olan VP paketini sepete ekle.</p></li>
+        <li data-reveal><span class="num">02</span><h3>Güvenle öde</h3><p>Kart veya havale ile ödemeni tamamla.</p></li>
+        <li data-reveal><span class="num">03</span><h3>Kodunu al</h3><p>E-pin kodun anında ekranda ve e-postanda.</p></li>
+        <li data-reveal><span class="num">04</span><h3>Oyunda kullan</h3><p>Mağaza → VP Satın Al → Ön ödemeli kod alanına gir.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="sss" class="section">
+    <div class="container faq-wrap">
+      <div>
+        <span class="eyebrow">Yardım Merkezi</span>
+        <h2>Sıkça Sorulan Sorular</h2>
+        <p class="muted">Aradığını bulamadın mı? Destek ekibimiz 7/24 yanında.</p>
+        <a href="#destek" class="btn btn-outline">Destek ile İletişim</a>
+      </div>
+      <div class="faq">
+        <details data-reveal open><summary>Kodlar hangi bölgede geçerli?</summary><p>Tüm kodlar Türkiye (TR) bölgesi hesaplar içindir. Farklı bölgedeki hesaplarda çalışmaz.</p></details>
+        <details data-reveal><summary>Kodum ne kadar sürede teslim edilir?</summary><p>Kart ödemelerinde ödeme onaylandığı anda otomatik teslim edilir. Havale/EFT ödemelerinde onay süresi banka saatlerine bağlıdır.</p></details>
+        <details data-reveal><summary>Kodu nereye gireceğim?</summary><p>Oyun içinde Mağaza → VP Satın Al → “Ön Ödemeli Kartlar ve Kodlar” bölümüne kodu girerek yükleyebilirsin.</p></details>
+        <details data-reveal><summary>Fatura alabilir miyim?</summary><p>Evet, her sipariş için e-arşiv faturası e-posta adresine gönderilir.</p></details>
+        <details data-reveal><summary>İade yapılıyor mu?</summary><p>Dijital kodlarda, kod görüntülendikten sonra iade yapılamaz. Teslim edilmemiş siparişler için destek ekibine ulaşabilirsin.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="destek" class="cta-band">
+    <div class="container cta-inner" data-reveal>
+      <div>
+        <h2>Bir sorun mu var?</h2>
+        <p>Siparişinle ilgili her konuda destek ekibimize ulaşabilirsin.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="mailto:destek@ornek.com" class="btn btn-light">destek@ornek.com</a>
+        <a href="#" class="btn btn-ghost-light">Canlı Destek</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="f-brand">
+      <a href="#top" class="logo">
+        <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><polygon points="16,1 30,13 16,31 2,13" fill="#ff4655"/><polygon points="16,1 30,13 16,15" fill="#fff" opacity=".3"/><polygon points="16,9 22,14 16,22 10,14" fill="none" stroke="#fff" stroke-width="1.6"/></svg>
+        <span>VP<b>Market</b></span>
+      </a>
+      <p>Valorant Points e-pin kodlarında hızlı, güvenli ve uygun fiyatlı alışveriş.</p>
+    </div>
+    <div>
+      <h4>Mağaza</h4>
+      <a href="#paketler">Tüm Paketler</a>
+      <a href="#paketler">İndirimli Paketler</a>
+      <a href="#nasil">Nasıl Yüklenir</a>
+    </div>
+    <div>
+      <h4>Kurumsal</h4>
+      <a href="#">Hakkımızda</a>
+      <a href="#">Mesafeli Satış Sözleşmesi</a>
+      <a href="#">KVKK Aydınlatma Metni</a>
+      <a href="#">İade Politikası</a>
+    </div>
+    <div>
+      <h4>Destek</h4>
+      <a href="#sss">SSS</a>
+      <a href="#destek">İletişim</a>
+      <a href="mailto:destek@ornek.com">destek@ornek.com</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© <span id="year"></span> VPMarket. Tüm hakları saklıdır.</p>
+    <p class="disclaimer">VPMarket bağımsız bir e-pin satıcısıdır. Valorant ve Riot Games, Riot Games, Inc.'in ticari markalarıdır; bu site Riot Games tarafından desteklenmez veya onaylanmaz.</p>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Sepet" aria-hidden="true">
+  <div class="drawer-head">
+    <h3>Sepetim <small id="cartCount2"></small></h3>
+    <button class="icon-btn" id="cartClose" aria-label="Kapat"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+  </div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="sum-row"><span>Ara toplam</span><span id="cartSub">0,00 ₺</span></div>
+    <div class="sum-row save" id="cartSaveRow"><span>Kazancın</span><span id="cartSave">0,00 ₺</span></div>
+    <div class="sum-row total"><span>Toplam</span><strong id="cartTotal">0,00 ₺</strong></div>
+    <button class="btn btn-primary btn-block btn-lg" id="checkoutBtn">Ödemeye Geç</button>
+    <p class="secure-note"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Ödemeler SSL ile şifrelenir</p>
+  </div>
+</aside>
+
+<div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+  <div class="modal-box modal-wide">
+    <button class="icon-btn modal-close" data-close aria-label="Kapat"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div class="pm-grid">
+      <img id="pmImg" alt="">
+      <div>
+        <span class="chip">TR Bölgesi</span> <span class="chip ok"><i class="live-dot"></i>Stokta</span>
+        <h3 id="pmTitle"></h3>
+        <div class="pm-price"><strong id="pmPrice"></strong><s id="pmOld"></s><span class="disc" id="pmDisc"></span></div>
+        <ul class="pm-list">
+          <li>Ödeme sonrası anında otomatik teslimat</li>
+          <li>Kod sipariş ekranında ve e-postanda görünür</li>
+          <li>Yalnızca Türkiye bölgesi hesaplarda geçerlidir</li>
+        </ul>
+        <div class="pm-buy">
+          <div class="qty qty-lg"><button id="pmDec" aria-label="Azalt">−</button><span id="pmQty">1</span><button id="pmInc" aria-label="Arttır">+</button></div>
+          <button class="btn btn-primary btn-lg" id="pmAdd">Sepete Ekle</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="coTitle">
+  <div class="modal-box modal-wide">
+    <button class="icon-btn modal-close" data-close aria-label="Kapat"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div id="checkoutView" class="co-grid">
+      <form id="checkoutForm" novalidate>
+        <h3 id="coTitle">Ödeme</h3>
+        <p class="muted">E-pin kodların bu bilgilere gönderilecek.</p>
+        <div class="field-row">
+          <label>Ad Soyad<input name="name" required autocomplete="name" maxlength="50" minlength="3" data-only="name" spellcheck="false"></label>
+          <label>Telefon<input name="phone" type="tel" required placeholder="05XXXXXXXXX" autocomplete="tel" inputmode="numeric" maxlength="11" pattern="05[0-9]{9}" data-only="digits"></label>
+        </div>
+        <label>E-posta<input name="email" type="email" required autocomplete="email" maxlength="80" data-only="email" spellcheck="false"></label>
+        <fieldset class="pay-methods" id="payMethods">
+          <legend>Ödeme yöntemi</legend>
+        </fieldset>
+        <label class="check"><input type="checkbox" name="terms" required> <span><a href="#">Mesafeli Satış Sözleşmesi</a>'ni ve <a href="#">KVKK Aydınlatma Metni</a>'ni okudum, onaylıyorum.</span></label>
+        <p class="form-error" id="formError" hidden></p>
+        <button class="btn btn-primary btn-block btn-lg" type="submit" id="payBtn">Güvenli Öde · <span id="payTotal"></span></button>
+        <p class="demo-note" id="demoNote" hidden>Demo modu açık — test ödemesi seçilirse gerçek para çekilmez.</p>
+      </form>
+      <aside class="co-summary">
+        <h4>Sipariş Özeti</h4>
+        <div id="coItems"></div>
+        <div class="sum-row total"><span>Toplam</span><strong id="coTotal"></strong></div>
+      </aside>
+    </div>
+    <div id="successView" class="success" hidden>
+      <div class="success-ico"><svg class="ico " viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+      <h3>Siparişin alındı!</h3>
+      <p class="muted">Sipariş No: <b id="orderNo"></b></p>
+      <p>Demo modunda kod üretilmez. Gerçek sistemde e-pin kodların burada ve e-postanda görünecek.</p>
+      <button class="btn btn-primary" data-close>Alışverişe Devam Et</button>
+    </div>
+  </div>
+</div>
+
+<canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

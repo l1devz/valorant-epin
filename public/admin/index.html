@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Yönetim Paneli | VPMarket</title>
+  <link rel="icon" href="/img/vp-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body class="adm">
+
+<section class="login" id="login" hidden>
+  <form class="login-box" id="loginForm">
+    <div class="logo"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><polygon points="16,1 30,13 16,31 2,13" fill="#ff4655"/><polygon points="16,1 30,13 16,15" fill="#fff" opacity=".3"/></svg><span>VP<b>Market</b></span></div>
+    <h1>Yönetim Paneli</h1>
+    <label>Şifre<input type="password" name="password" required autocomplete="current-password" autofocus></label>
+    <p class="form-error" id="loginErr" hidden></p>
+    <button class="btn btn-primary btn-block" type="submit">Giriş Yap</button>
+  </form>
+</section>
+
+<div class="app" id="app" hidden>
+  <aside class="side">
+    <div class="logo"><svg viewBox="0 0 32 32" width="26" height="26" aria-hidden="true"><polygon points="16,1 30,13 16,31 2,13" fill="#ff4655"/><polygon points="16,1 30,13 16,15" fill="#fff" opacity=".3"/></svg><span>VP<b>Market</b></span></div>
+    <nav>
+      <button class="nav-btn active" data-tab="dash"><svg class="ico" viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>Özet</button>
+      <button class="nav-btn" data-tab="orders"><svg class="ico" viewBox="0 0 24 24"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M3 16v5h5"/><path d="M21 16v5h-5"/><path d="M7 12h10"/></svg>Siparişler <b class="pill" id="navPaid" hidden></b></button>
+      <button class="nav-btn" data-tab="stock"><svg class="ico" viewBox="0 0 24 24"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>Kod Stoğu</button>
+    </nav>
+    <div class="side-foot">
+      <a href="/" target="_blank" rel="noopener" class="btn btn-outline btn-block">Siteyi Aç</a>
+      <button class="btn btn-outline btn-block" id="logout">Çıkış</button>
+    </div>
+  </aside>
+
+  <main class="content">
+    <section class="tab" id="tab-dash">
+      <h1>Özet</h1>
+      <div class="alert" id="paidAlert" hidden></div>
+      <div class="stats" id="stats"></div>
+      <h2>Stok Durumu</h2>
+      <div class="stock-grid" id="stockGrid"></div>
+    </section>
+
+    <section class="tab" id="tab-orders" hidden>
+      <div class="tab-head">
+        <h1>Siparişler</h1>
+        <div class="filters">
+          <input type="search" id="orderSearch" placeholder="Sipariş no, e-posta, telefon…" maxlength="80">
+          <select id="orderStatus">
+            <option value="">Tüm durumlar</option>
+            <option value="paid">Teslim bekliyor</option>
+            <option value="delivered">Teslim edildi</option>
+            <option value="pending">Ödeme bekleniyor</option>
+            <option value="failed">Başarısız</option>
+            <option value="cancelled">İptal</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-wrap"><table class="tbl" id="ordersTable"></table></div>
+    </section>
+
+    <section class="tab" id="tab-stock" hidden>
+      <h1>Kod Stoğu</h1>
+      <div class="stock-layout">
+        <form class="panel" id="addCodesForm">
+          <h2>Kod Ekle</h2>
+          <label>Ürün<select name="productId" id="codeProduct" required></select></label>
+          <label>Kodlar <small class="muted">(her satıra bir kod)</small><textarea name="codes" rows="10" required spellcheck="false" placeholder="XXXX-XXXX-XXXX&#10;YYYY-YYYY-YYYY"></textarea></label>
+          <button class="btn btn-primary btn-block" type="submit">Stoğa Ekle</button>
+          <p class="muted small">Eklenen kodlar, teslim bekleyen siparişlere otomatik dağıtılır.</p>
+        </form>
+        <div class="panel">
+          <div class="tab-head">
+            <h2>Kodlar</h2>
+            <div class="filters">
+              <select id="listProduct"></select>
+              <select id="listUsed"><option value="0">Kullanılmamış</option><option value="1">Kullanılmış</option></select>
+            </div>
+          </div>
+          <div class="table-wrap"><table class="tbl" id="codesTable"></table></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<div class="modal" id="orderModal" role="dialog" aria-modal="true">
+  <div class="modal-box modal-wide">
+    <button class="icon-btn modal-close" data-close aria-label="Kapat"><svg class="ico" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <div id="orderDetail"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/admin/admin.js"></script>
+</body>
+</html>

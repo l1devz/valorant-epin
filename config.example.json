@@ -1,0 +1,49 @@
+{
+  "site": {
+    "name": "VPMarket",
+    "baseUrl": "http://localhost:5500",
+    "port": 5500,
+    "trustProxy": false,
+    "supportEmail": "destek@ornek.com"
+  },
+  "admin": {
+    "password": ""
+  },
+  "payment": {
+    "demo": {
+      "enabled": true
+    },
+    "paytr": {
+      "enabled": false,
+      "merchantId": "",
+      "merchantKey": "",
+      "merchantSalt": "",
+      "testMode": true,
+      "debug": true,
+      "maxInstallment": 0,
+      "timeoutMinutes": 30
+    },
+    "shopier": {
+      "enabled": false,
+      "apiKey": "",
+      "apiSecret": "",
+      "websiteIndex": 1,
+      "productType": 1
+    }
+  },
+  "notify": {
+    "discordWebhook": ""
+  },
+  "store": {
+    "allowBackorder": true,
+    "maxQtyPerItem": 20
+  },
+  "products": [
+    { "id": "vp475",   "vp": 475,   "price": 109,  "old": 0,    "tags": [] },
+    { "id": "vp1000",  "vp": 1000,  "price": 219,  "old": 0,    "tags": ["popular"] },
+    { "id": "vp2050",  "vp": 2050,  "price": 429,  "old": 459,  "tags": ["popular"], "badge": "Çok Satan" },
+    { "id": "vp3650",  "vp": 3650,  "price": 749,  "old": 799,  "tags": [] },
+    { "id": "vp5350",  "vp": 5350,  "price": 1079, "old": 1149, "tags": ["popular"] },
+    { "id": "vp11000", "vp": 11000, "price": 2149, "old": 2299, "tags": [], "badge": "En Avantajlı", "ok": true }
+  ]
+}

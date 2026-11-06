@@ -1,0 +1,12 @@
+{
+  "name": "vpmarket",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Valorant Points e-pin mağazası — PayTR & Shopier entegrasyonu, otomatik kod teslimi ve yönetim paneli",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node server.js",
+    "cards": "node tools/generate-cards.mjs"
+  }
+}

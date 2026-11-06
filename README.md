@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="public/img/cards/vp-2050.svg" alt="VPMarket" width="420">
+
 # VPMarket
 
 **Valorant Points e-pin satışı için açık kaynak, kurulumu kolay e-ticaret altyapısı.**
